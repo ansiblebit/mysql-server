@@ -1,14 +1,14 @@
-# PostgreSQL server
+# MySQL server
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/ansiblebit/postgresql/master/LICENSE)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/ansiblebit/mysql/master/LICENSE)
 
 [![Platform](http://img.shields.io/badge/platform-macosx-000000.svg?style=flat)](#)
 
-[![Project Stats](https://www.openhub.net/p/ansiblebit-postgresql/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-postgresql/)
+[![Project Stats](https://www.openhub.net/p/ansiblebit-mysql/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-mysql/)
 
-Ansile role to setup [PostgreSQL][postgresql] server on OSX.
+Ansile role to setup [mysql][mysql] server on OSX.
 
-This role will install the [PostgreSQL][postgresql] version that comes with [macports][macports].
+This role will install the [mysql][mysql] version that comes with [macports][macports].
 
 
 ## Tests
@@ -30,34 +30,32 @@ it may be a good idea to mention in this section that the boto package is requir
 
 ## Role Variables
 
-- **postgresql_set_default**: flag to indicate if the current version should be set as default.
-- **postgresql_users**: a list of users to setup their environment with PostgreSQL aliases.
-- **postgresql_version**: the PostgreSQL version to be installed (major and minor version number must be specified).
+- **mysql_set_default**: flag to indicate if the current version should be set as default.
+- **mysql_users**: a list of users to setup their environment with mysql aliases.
+- **mysql_version**: the mysql version to be installed (major and minor version number must be specified).
 
 
 ## Playbooks
-
-    ---
-
-    - name: PostgreSQL play
+    
+    - name: tests play
       hosts: "{{ vagrant_box }}"
       gather_facts: yes
       vars:
         debug: yes
-
+    
         macports_selfupdate: no
         macports_upgrade_outdated: no
-
-        postgresql_version: 9.5
-        postgresql_set_default: yes
-        postgresql_users:
+    
+        mysql_version: '5.6'
+        mysql_set_default: yes
+        mysql_users:
           - steenzout
-
-
+    
+    
       roles:
-        - role: postgresql_server
-          tags: [ database, postgresql, server ]
-
+        - role: mysql_server
+          tags: [ database, mysql, server ]
+    
         - role: tests
           tags: test
 
@@ -107,7 +105,7 @@ $ vagrant ssh trusty64.vagrant.dev
 
 ## Links
 
-- [PostgreSQL homepage][postgresql]
+- [mysql homepage][mysql]
 
 
 ## License
@@ -121,7 +119,7 @@ $ vagrant ssh trusty64.vagrant.dev
 
 
 [ansiblebit.macports]:   https://github.com/ansiblebit/macports/    "ansiblebit/macports"
-[license]:      https://raw.githubusercontent.com/ansiblebit/postgresql/master/LICENSE  "License"
+[license]:      https://raw.githubusercontent.com/ansiblebit/mysql/master/LICENSE  "License"
 [macports]:     https://macports.org/           "macports.org"
-[postgresql]:   http://postgresql.org/          "PostgreSQL"
+[mysql]:        http://mysql.com/               "mysql"
 [steenzout]:    https://github.com/steenzout/   "steenzout"

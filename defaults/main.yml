@@ -1,14 +1,14 @@
 ---
-# file: postgresql/defaults/main.yml
+# file: mysql/defaults/main.yml
 #
 # defaults file
 #
 
-postgresql_set_default: yes
+mysql_set_default: yes
 
-postgresql_users:
+mysql_users:
   - "{{ ansible_env.USER }}"
 
-postgresql_version: 9.5
-postgresql_major_version: "{{ postgresql_version.split('.')[0] }}"
-postgresql_minor_version: "{{ postgresql_version .split('.')[1] }}"
+mysql_version: '5.6'
+mysql_major_version: "{{ mysql_version.split('.')[0] }}"
+mysql_minor_version: "{{ mysql_version .split('.')[1] }}"

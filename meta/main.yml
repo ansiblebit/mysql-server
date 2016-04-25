@@ -1,20 +1,18 @@
 ---
-# file: postgresql/meta/main.yml
+# file: mysql/meta/main.yml
 #
 # meta file
 #
 galaxy_info:
   author: Pedro Salgado
-  description: Role for PostgreSQL on MacOSX.
+  description: Role for MySQL server on MacOSX.
   company: ansiblebit.org
   license: BSD
-  min_ansible_version: 1.7.2
+  min_ansible_version: 1.9.4
   platforms:
     - name: MacOSX
-      versions:
-        - 10.11
-        - 10.10
   galaxy_tags:
     - database
 dependencies:
   - role: ansiblebit.macports
+    when: (ansible_distribution | lower == 'darwin') or (ansible_distribution | lower == 'macosx')
