@@ -1,14 +1,14 @@
 # MySQL server
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/ansiblebit/mysql/master/LICENSE)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/ansiblebit/mysql_server/master/LICENSE)
 
 [![Platform](http://img.shields.io/badge/platform-macosx-000000.svg?style=flat)](#)
 
-[![Project Stats](https://www.openhub.net/p/ansiblebit-mysql/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-mysql/)
+[![Project Stats](https://www.openhub.net/p/ansiblebit-mysql-server/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-mysql-server/)
 
-Ansile role to setup [mysql][mysql] server on OSX.
+Ansile role to setup [MySQL][mysql] server on OSX.
 
-This role will install the [mysql][mysql] version that comes with [macports][macports].
+This role will install the [MySQL][mysql] version that comes with [macports][macports].
 
 
 ## Tests
