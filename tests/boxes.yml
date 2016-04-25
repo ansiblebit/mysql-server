@@ -1,5 +1,5 @@
 ---
-# file: postgresql/tests/vars/main.yml
+# file: mysql/tests/vars/main.yml
 #
 
 vagrant:

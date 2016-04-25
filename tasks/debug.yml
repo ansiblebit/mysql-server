@@ -1,5 +1,5 @@
 ---
-# file: postgresql/tasks/debug.yml
+# file: mysql/tasks/debug.yml
 #
 # debug tasks.
 #
@@ -11,7 +11,7 @@
     - debug
     - ansible_os_family
     - ansible_os_distribution
-    - postgresql_version
-    - postgresql_major_version
-    - postgresql_minor_version
-    - postgresql_users
+    - mysql_version
+    - mysql_major_version
+    - mysql_minor_version
+    - mysql_users

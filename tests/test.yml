@@ -1,5 +1,5 @@
 ---
-# file: postgresql/tests/test.yml
+# file: mysql/tests/test.yml
 
 - name: tests play
   hosts: "{{ vagrant_box }}"
@@ -10,15 +10,15 @@
     macports_selfupdate: no
     macports_upgrade_outdated: no
 
-    postgresql_version: 9.5.2
-    postgresql_set_default: yes
-    postgresql_users:
+    mysql_version: '5.6'
+    mysql_set_default: yes
+    mysql_users:
       - steenzout
 
 
   roles:
-    - role: postgresql_server
-      tags: [ database, postgresql, server ]
+    - role: mysql_server
+      tags: [ database, mysql, server ]
 
     - role: tests
       tags: test

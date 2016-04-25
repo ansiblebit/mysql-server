@@ -1,5 +1,5 @@
 ---
-# file: postgresql/tasks/main.yml
+# file: mysql/tasks/main.yml
 #
 # tasks file
 #

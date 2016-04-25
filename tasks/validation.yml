@@ -1,5 +1,5 @@
 ---
-# file: postgresql/tasks/validation.yml
+# file: mysql/tasks/validation.yml
 #
 # validation tasks.
 #
@@ -7,8 +7,8 @@
 - name: ensure mandatory variables are set
   fail:
     msg="{{ item }} is a mandatory variable"
-  when: "{{ item }} is not defined"
+  when: ( item is not defined )
   with_items:
-    - postgresql_version
-    - postgresql_major_version
-    - postgresql_minor_version
+    - mysql_version
+    - mysql_major_version
+    - mysql_minor_version

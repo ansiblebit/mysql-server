@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+
+alias mysql{{ mysql_major_version }}{{ mysql_minor_version }}_start='sudo port load mysql{{ mysql_major_version }}{{ mysql_minor_version }}-server';
+alias mysql{{ mysql_major_version }}{{ mysql_minor_version }}_stop='sudo port unload mysql{{ mysql_major_version }}{{ mysql_minor_version }}-server';
